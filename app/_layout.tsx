@@ -4,6 +4,7 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false, headerStyle: { backgroundColor: '#E0DEDD' } }} />
+      <Stack.Screen name = './(tabs)/index.tsx'/>
     </Stack>
   )
   // return <Stack screenOptions={{ headerShown: false, headerStyle: { backgroundColor: '#E0DEDD' } }} />;

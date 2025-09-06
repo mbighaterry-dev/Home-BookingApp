@@ -5,11 +5,13 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import sectionData from './component/sectionData';
 import Section from './component/section';
 import headerData from './component/headerData';
+import { useRouter } from 'expo-router';
 
 
  export default function Home() {
   const [search, setSearch] = useState('');
   const [selected, setSelected] = useState(headerData[0].title);
+  const router = useRouter();
 
 
 
@@ -28,6 +30,7 @@ import headerData from './component/headerData';
           placeholderTextColor={'black'}
         />
       </View>  
+      <Text onPress={() => router.replace('/(tabs)')}>link</Text>
       <FlatList
       style={styles.quickLinks}
       horizontal
