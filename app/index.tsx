@@ -1,7 +1,8 @@
- import { StyleSheet, Text, View, TextInput } from 'react-native'
+ import { StyleSheet, Text, View, TextInput, FlatList, Image, ScrollView, Dimensions } from 'react-native'
 import { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import Ionicons from '@expo/vector-icons/Ionicons';  
+import popularListings from '@/data/popular';
  export default function Home() {
   const [search, setSearch] = useState('')
    return (
@@ -19,6 +20,22 @@ import Ionicons from '@expo/vector-icons/Ionicons';
           placeholderTextColor={'black'}
         />
       </View>
+     
+        <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={ styles.flatlist}
+        contentContainerStyle={{paddingLeft:20}}
+        data = {popularListings}
+        renderItem={({item})=>(
+          <View  style={styles.homecard}>
+            <Image source={item.image} />
+            <Text style={{fontWeight:'600', alignSelf:'flex-start', }}>{item.location}</Text>
+            <Text style={{ alignSelf:'flex-start', fontSize:13, color:'gray'}}>{item.price}</Text>
+          </View>
+        )}
+        keyExtractor={item => item.id}
+        />
     </LinearGradient>
    )
  }
@@ -46,5 +63,14 @@ import Ionicons from '@expo/vector-icons/Ionicons';
     fontWeight:'500',
         backgroundColor:'#ffffff',
 
+  },
+  flatlist:{
+    marginTop:20,
+    height:Dimensions.get('window').height*0.4,
+  },
+  homecard:{
+    alignItems:'center',
+    margin:10,
   }
+  
  })
