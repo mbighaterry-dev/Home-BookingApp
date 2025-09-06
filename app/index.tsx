@@ -1,13 +1,19 @@
- import { StyleSheet, Text, View, TextInput, FlatList, Image,  Dimensions } from 'react-native'
+ import { StyleSheet, Text, View, TextInput, FlatList, Image,  Dimensions, TouchableOpacity } from 'react-native'
 import { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import Ionicons from '@expo/vector-icons/Ionicons';  
 import sectionData from './component/sectionData';
 import Section from './component/section';
+import headerData from './component/headerData';
+
+
  export default function Home() {
   const [search, setSearch] = useState('');
-  
-   return (
+  const [selected, setSelected] = useState(headerData[0].title);
+
+
+
+    return (
     <LinearGradient 
     colors={['#E0DEDD', '#FEFEFD', '#0000000A']}
     start={{ x: 0, y: 0.5 }} end={{ x:0, y: 0 }}
@@ -21,8 +27,30 @@ import Section from './component/section';
           onChangeText={setSearch}
           placeholderTextColor={'black'}
         />
-      </View>   
+      </View>  
       <FlatList
+      style={styles.quickLinks}
+      horizontal
+      showsHorizontalScrollIndicator={false}
+            data={headerData}
+      keyExtractor={(item) => item.id }
+      renderItem={({item}) => (
+        <TouchableOpacity
+        style={[
+              styles.tab,
+              selected === item.title && styles.activeTab, 
+
+            ]}
+            onPress={() => setSelected(item.title)}
+            >
+          <Image source={item.Image}/>
+          <Text>{item.title}</Text>
+        </TouchableOpacity>
+      )}
+
+      /> 
+      <FlatList
+      style={styles.section}
       data = {sectionData}
       renderItem={({ item }) => (
         <Section title={item.title} data={item.data} />
@@ -37,7 +65,7 @@ import Section from './component/section';
   maincontainer:{
     flex:1,
     alignItems:'center',
-    paddingTop:50,
+    paddingTop:60,
     backgroundColor:'#FEFEFD'
   },
   container:{
@@ -57,6 +85,27 @@ import Section from './component/section';
         backgroundColor:'#ffffff',
 
   },
+  section:{
+    paddingVertical:40,
+  },
+  quickLinks:{
+    paddingVertical:40,
+  },
+  tab: {
+  alignItems: "center",
+  paddingVertical: 8,
+  paddingHorizontal: 14,
+  borderRadius: 12,
+  marginRight: 12,
+},
+activeTab: {
+  backgroundColor: "#f1f1f1", 
+},
+icon: {
+  width: 28,
+  height: 28,
+  resizeMode: "contain",
+},
   // flatlist:{
   //   marginTop:20,
   //   height:Dimensions.get('window').height*0.4,
