@@ -1,6 +1,6 @@
 const sectionData = [
      {
-    id: '2',
+    id: '1',
     title: 'Popular Homes in Doha',
     data:[
            {
@@ -10,13 +10,13 @@ const sectionData = [
                 price: '$230 for 2 nights 5.0',
             },
             {
-                id: 'b2',    
+                id: 'a2',    
                 image: require('../../assets/images/Apartment in The Pearl Doha.png'),
                 location: 'Apartment in The Pearl',
                 price: '$230 for 2 nights 5.0',
             },
             {
-                id: 'c3',    
+                id: 'a3',    
                 image: require('../../assets/images/Apartment in Doha, Westbay.png'),
                 location: 'Westbay, Doha, Qatar',  
                 price: '$230 for 2 nights 5.0', 
@@ -24,7 +24,7 @@ const sectionData = [
     ]
     },
      {
-        id: '1',
+        id: '2',
         title: 'Available next in AI Wukair',
         data:[
                 {
@@ -48,7 +48,7 @@ const sectionData = [
         ]
     },
     {
-        id: '1', 
+        id: '3', 
         title: 'Stay in Doha',
         data: [
                 {
