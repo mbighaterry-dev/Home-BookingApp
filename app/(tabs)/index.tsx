@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
-import Ionicons from '@expo/vector-icons/Ionicons'
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { useRouter } from 'expo-router';
 
 export default function Home() {
+  const router = useRouter();
   return (        
     <ScrollView style={styles.container}>
+      <Text onPress={() => router.push('/(tabs)/trips')}>link</Text>
       <View style={{flexDirection: 'row', gap: 10, justifyContent:'flex-end', }}>
           <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20}}>
               <Ionicons name="search" size={20}/>
