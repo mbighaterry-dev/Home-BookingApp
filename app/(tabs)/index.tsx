@@ -1,10 +1,20 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
+import Ionicons from '@expo/vector-icons/Ionicons'
 
 export default function Home() {
-  return (
-    <View style={styles.container}>
-      <Text style={{fontSize :32, fontWeight:'500'}}>Profile</Text>
+  return (        
+    <ScrollView style={styles.container}>
+      <View style={{flexDirection: 'row', gap: 10, justifyContent:'flex-end', }}>
+          <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20}}>
+              <Ionicons name="search" size={20}/>
+          </View>
+          <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20}}>
+          <Ionicons name="settings" size={20}/>
+          </View>
+        </View>
+      <View style={{paddingHorizontal:20}}>
+         <Text style={{fontSize :32, fontWeight:'500'}}>Profile</Text>
       <View style={styles.profileContainer}>
         <View style={styles.profileImage}>
             <Text style={{fontSize:40, color:"#FFFFFF", fontWeight:'700'}}>F</Text>
@@ -29,7 +39,67 @@ export default function Home() {
             <Text>It is easy to start hosting and earn income.</Text>
         </View>
       </View>
-    </View>
+      </View>
+        <View style={{gap:20, paddingHorizontal:30, marginTop:20}}>
+          <View style={styles.menuItem}>
+            <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+              <Ionicons name='hand-left-outline' size={24}/>
+              <Text style={{fontSize:14, fontWeight:'400'}}>Account settings</Text>
+            </View>
+            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} />
+          </View>
+          <View style={styles.menuItem}>
+            <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+              <Ionicons name='hand-left-outline' size={24}/>
+              <Text style={{fontSize:14, fontWeight:'400'}}>Get help</Text>
+            </View>
+            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} />
+          </View>
+          <View style={styles.menuItem}>
+            <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+              <Ionicons name='hand-left-outline' size={24}/>
+              <Text style={{fontSize:14, fontWeight:'400'}}>View profile</Text>
+            </View>
+            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} />
+          </View>
+          <View style={styles.menuItem}>
+            <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+              <Ionicons name='hand-left-outline' size={24}/>
+              <Text style={{fontSize:14, fontWeight:'400'}}>Privacy</Text>
+            </View>
+            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} />
+        </View>
+        <View style ={{borderBottomColor: "#ccc", borderBottomWidth: 1, marginVertical: 10,}}></View>
+         <View style={styles.menuItem}>
+            <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+              <Ionicons name='hand-left-outline' size={24}/>
+              <Text style={{fontSize:14, fontWeight:'400'}}>Account settings</Text>
+            </View>
+            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} />
+          </View>
+          <View style={styles.menuItem}>
+            <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+              <Ionicons name='hand-left-outline' size={24}/>
+              <Text style={{fontSize:14, fontWeight:'400'}}>Get help</Text>
+            </View>
+            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} />
+          </View>
+          <View style={styles.menuItem}>
+            <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+              <Ionicons name='hand-left-outline' size={24}/>
+              <Text style={{fontSize:14, fontWeight:'400'}}>View profile</Text>
+            </View>
+            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} />
+          </View>
+          <View style={styles.menuItem}>
+            <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+              <Ionicons name='hand-left-outline' size={24}/>
+              <Text style={{fontSize:14, fontWeight:'400'}}>Privacy</Text>
+            </View>
+            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} />
+        </View>
+      </View>     
+    </ScrollView>
   )
 }
 
@@ -37,8 +107,7 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
         backgroundColor: '#eee',
-        paddingHorizontal: 20,
-        paddingTop:60,
+        paddingTop:50,
         gap: 16
     },
     profileContainer:{
@@ -55,7 +124,7 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     },
     profileImage:{
-        backgroundColor:'black',
+        backgroundColor:'#000',
         borderRadius: 55,
         width: 110,
         height: 110,
@@ -101,5 +170,11 @@ const styles = StyleSheet.create({
     gap:10,
     width:383,
     height: 80,
-    }
+    marginTop:30
+    },
+    menuItem:{
+      flexDirection:'row',
+      alignItems: 'center',
+      justifyContent: 'space-between'
+    },
 })
