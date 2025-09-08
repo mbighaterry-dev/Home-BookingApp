@@ -106,7 +106,7 @@ export default function Product() {
         </View>
       </View>
       <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1, margin:20  }}/>
-      <View style={{paddingHorizontal:10}}>
+      <View style={{paddingHorizontal:20}}>
         <Text style={{fontSize:18, fontWeight:700, color:'#000000', marginBottom:20,}}>Where you will sleep</Text>
         <FlatList
         horizontal
@@ -123,7 +123,35 @@ export default function Product() {
         />
       </View>
       <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1, margin:20  }}/>
-
+      <View style={{paddingHorizontal:20, gap: 20}}>
+        <Text style={{color:'#000000', fontSize:18, fontWeight:'500'}}>What this place offers</Text>
+        <View style={{gap:20}}>
+          <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+            <Ionicons name='hand-left-outline' size={24}/>
+            <Text style={{fontSize:14, fontWeight:'400'}}>City skyline view</Text>
+          </View>
+          <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+            <Ionicons name='hand-left-outline' size={24}/>
+            <Text style={{fontSize:14, fontWeight:'400'}}>Search beach access</Text>
+          </View>
+          <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+            <Ionicons name='hand-left-outline' size={24}/>
+            <Text style={{fontSize:14, fontWeight:'400'}}>Kitchen</Text>
+          </View>
+          <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+            <Ionicons name='hand-left-outline' size={24}/>
+            <Text style={{fontSize:14, fontWeight:'400'}}>Wifi</Text>
+          </View>
+          <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+            <Ionicons name='hand-left-outline' size={24}/>
+            <Text style={{fontSize:14, fontWeight:'400'}}>Fitness center access</Text>
+          </View>
+          <TouchableOpacity style={{backgroundColor:'#c9c9c9ff', width: 382, height: 52, justifyContent:'center', alignItems:'center', borderRadius:8}}>
+            <Text style={{ color:'#222222', fontSize:16, fontWeight:'500'}}>Show all 70 amenities</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1, margin:20 , marginTop:20 }}/>
     </ScrollView>
   )
 }
