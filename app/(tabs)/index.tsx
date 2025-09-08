@@ -10,7 +10,7 @@ export default function Home() {
       <Text onPress={() => router.push('/(tabs)/trips')}>link</Text>
       <View style={{flexDirection: 'row', gap: 10, justifyContent:'flex-end', }}>
           <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20}}>
-              <Ionicons name="search" size={20} onPress={() => router.push('/(tabs)/Notification')}/>
+              <Ionicons name="search-outline" size={20} onPress={() => router.push('/(tabs)/Notification')}/>
           </View>
           <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20}}>
           <Ionicons name="settings" size={20}/>
