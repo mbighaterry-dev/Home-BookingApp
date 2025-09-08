@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, FlatList } from 'react-native'
 import React from 'react';
-import Ionicons from '@expo/vector-icons/Ionicons'
+import Ionicons from '@expo/vector-icons/Ionicons';
+import Sleep from '../component/sleep'
 
 export default function Product() {
   return (
@@ -89,6 +90,40 @@ export default function Product() {
           <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1,  }}/>
         </View>
       </View>
+      <View style={{gap:20, padding:20}}>
+        <View style={{backgroundColor:'#F7F7F7', borderRadius:8, height: 74, width:384, padding:16}}>
+          <Text style={{fontSize:14, fontStyle:400, color: '#6A6A6A'}}>Some info has automatically been translatd.</Text>
+          <Text style={{textDecorationLine:'underline', fontSize:14, fontWeight:'500', color:""}}>Show original</Text>
+        </View>
+        <View style={{gap:5}}>
+          <Text style={{color:'#222222', fontSize:14, fontWeight:'400'}}>One Bedroom Apartment in Downtown Doha, Next</Text>
+          <Text style={{color:'#222222', fontSize:14, fontWeight:'400'}}>to National Meuseum. Rooftop wimming Pool.</Text>
+          <Text style={{color:'#222222', fontSize:14, fontWeight:'400'}}>King Size Bed. Free Wifi, Free Parking && Free Gym</Text>
+          <Text style={{marginBottom:20,color:'#222222', fontSize:14, fontWeight:'400'}}>Close to Meto.</Text>
+
+          <Text style={{color:'#222222', fontSize:14, fontWeight:'400'}}>Welcome to Paramount - your home away from</Text>
+          <Text style={{color:'#222222', fontSize:14, fontWeight:'400'}}>home. This stylish, modern apartment has it all to</Text>
+        </View>
+      </View>
+      <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1, margin:20  }}/>
+      <View style={{paddingHorizontal:10}}>
+        <Text style={{fontSize:18, fontWeight:700, color:'#000000', marginBottom:20,}}>Where you will sleep</Text>
+        <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.flatlist}
+        data={Sleep}
+        renderItem={({item}) => (
+        <View key={item.id} style={{marginRight:20}}>
+        <Image source={item.Image}/>
+        <Text style={{color:'#000000', fontSize: 14, fontWeight:'500', marginTop:5}}>{item.title}</Text>
+        <Text style={{fontSize:12, fontWeight:'400', color:'#6A6A6A', marginTop:3}}>{item.price}</Text>
+        </View>
+        )}
+        />
+      </View>
+      <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1, margin:20  }}/>
+
     </ScrollView>
   )
 }
@@ -101,4 +136,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center'
   },
+  
 })
