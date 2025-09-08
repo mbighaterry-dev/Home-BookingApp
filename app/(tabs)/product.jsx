@@ -50,6 +50,45 @@ export default function Product() {
           </View>
         </View>
       </View>
+      <View style={{ padding:20, gap:20 }}>
+        <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1,  }}/>
+        <View style={{flexDirection:'row',  gap: 10 , }}>
+          <View style={{height:40, width:40, borderRadius:20, backgroundColor:'#D9D9D9'}}/>
+          <View>
+            <Text style={{fontSize:14, fontWeight:'500', color:'#222222'}}>Host by Faizan</Text>
+            <Text style={{fontSize:14, fontWeight:'400', color:'#6A6A6A'}}>Superhost 2 years hosting</Text>
+          </View>
+        </View>
+                <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1,  }}/>
+      </View>
+      <View >
+        <View style={{padding:20, gap:20 }}>
+          <View style={{flexDirection:'row', gap:20, alignItems:'center',}}>
+            <Ionicons name='hand-left-outline' size={24}/>
+            <View>
+              <Text style={{fontSize:14, fontWeight:'500' , color : '#222222', marginBottom:'5'}}>Swim in the infinity pool</Text>
+              <Text  style={{color:'#6A6A6A', fontWeight:'400'}}>it some of the many things that makes this</Text>
+              <Text  style={{color:'#6A6A6A', fontWeight:'400'}}>home special.</Text>
+            </View>         
+          </View>
+          <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+            <Ionicons name='hand-left-outline' size={24}/>
+            <View>
+              <Text style={{fontSize:14, fontWeight:'500' , color : '#222222', marginBottom:'5'}}>At-home special</Text>
+              <Text  style={{color:'#6A6A6A', fontWeight:'400'}}>The treadmill, stationary bike, yoga mat and </Text>
+              <Text  style={{color:'#6A6A6A', fontWeight:'400'}}>free weights are ready for workout.</Text>
+            </View>         
+          </View>
+          <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
+            <Ionicons name='hand-left-outline' size={24}/>
+            <View>
+              <Text style={{fontSize:14, fontWeight:'500', color : '#222222', marginBottom:'5'}}>Dive right in</Text>
+              <Text style={{color:'#6A6A6A', fontWeight:'400'}}>Check your self in the smartlock.</Text>
+            </View>         
+          </View>
+          <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1,  }}/>
+        </View>
+      </View>
     </ScrollView>
   )
 }
