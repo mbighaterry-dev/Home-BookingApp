@@ -17,9 +17,9 @@ import { useRouter } from 'expo-router';
 
     return (
     <LinearGradient 
-    colors={['#E0DEDD', '#FEFEFD', '#0000000A']}
-    start={{ x: 0, y: 0.5 }} end={{ x:0, y: 0 }}
-     style={styles.maincontainer}>
+      colors={['#E0DEDD', '#FEFEFD', '#0000000A']}
+      start={{ x: 0, y: 0.5 }} end={{ x:0, y: 0 }}
+      style={styles.maincontainer}>
       <View style={styles.container}>
         <Ionicons style={{ alignSelf: 'center' }} name="search" size={20} color="black" />
         <TextInput
@@ -68,7 +68,6 @@ import { useRouter } from 'expo-router';
   maincontainer:{
     flex:1,
     alignItems:'center',
-    paddingTop:60,
     backgroundColor:'#FEFEFD'
   },
   container:{
@@ -79,13 +78,15 @@ import { useRouter } from 'expo-router';
     padding:10,
     alignItems:'center',
     justifyContent:'center',
+    marginTop:50,
+
   },
   input:{
     width:300,
     fontSize:16,
     color:'black',
     fontWeight:'500',
-        backgroundColor:'#ffffff',
+    backgroundColor:'#ffffff',
 
   },
   section:{
@@ -102,7 +103,6 @@ import { useRouter } from 'expo-router';
   marginRight: 12,
 },
 activeTab: {
-  backgroundColor: "#f1f1f1", 
 },
 icon: {
   width: 28,
