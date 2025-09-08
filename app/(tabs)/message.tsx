@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import  { useState } from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -35,7 +35,43 @@ export default function Message() {
             </TouchableOpacity>
           ))}
         </ScrollView>
-      </View>      
+      </View>
+      <View style={{gap:20, marginTop:30}}>
+        <View style={styles.messagesContainer}>
+          <View style={styles.imageContainer}>
+            <Image source={require('../../assets/images/Vector.png')}/>
+          </View>
+          <View>
+            <View style={{gap:7,}}>
+              <View style={{gap:5}}>
+                <View style={{flexDirection:"row", justifyContent:'space-between', alignItems:'center'}}>
+                  <Text style={{fontSize:14, fontWeight:'500', color:'#000000'}}>Airbnb Support</Text>
+                  <Text style={{fontSize:14, fontWeight:'500', color:'#000000'}}>9:43</Text>
+                </View>
+                <Text style={{fontSize:14, fontWeight:'500', color:'#000000'}}>Airbnb: This conversation is closed. if you s...</Text>
+              </View>          
+              <Text style={{fontSize:12, fontWeight:'500', color:'#000000'}}>Closed</Text>
+            </View>
+          </View>        
+        </View> 
+        <View style={styles.messagesContainer}>
+          <View style={styles.imageContainer}>
+            <Image source={require('../../assets/images/Vector.png')}/>
+          </View>
+          <View>
+            <View style={{gap:7,}}>
+              <View style={{gap:5}}>
+                <View style={{flexDirection:"row",gap:165 }}>
+                  <Text style={{fontSize:14, fontWeight:'500', color:'#000000'}}>Airbnb Support</Text>
+                  <Text style={{fontSize:14, fontWeight:'500', color:'#000000'}}>9:43</Text>
+                </View>
+                <Text style={{fontSize:14, fontWeight:'500', color:'#000000'}}>This conversation is closed</Text>
+              </View>          
+              <Text style={{fontSize:12, fontWeight:'500', color:'#000000'}}>Closed</Text>
+            </View>
+          </View>        
+        </View>       
+      </View>       
     </View>
   )
 }
@@ -71,5 +107,18 @@ const styles = StyleSheet.create({
     },
     activeText:{
       color: '#ffff'
+    },
+    messagesContainer:{
+      flexDirection: 'row',
+      gap: 10,
+      width: 382,
+    },
+    imageContainer:{
+      backgroundColor:'#222222',
+      height: 64,
+      width:64,
+      borderRadius:32,
+      alignItems:'center',
+      justifyContent: 'center'
     },
 })
