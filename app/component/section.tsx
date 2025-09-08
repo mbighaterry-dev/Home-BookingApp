@@ -14,13 +14,13 @@ export const Section = ({ title, data }: { title: string; data: any[] }) => (
       renderItem={({ item }) => (
         <View style={styles.card}>
             <View style={styles.imageContainer}>
-                <View style= {styles.guestButton}>
-                    <Text>Guest favorite</Text>
-                </View>
-                <TouchableOpacity style={styles.iconButton }>
-                    <Ionicons name="heart-outline" size={24} color={'white'}/>
-                </TouchableOpacity>
-          <Image source={item.image}  />
+              <View style= {styles.guestButton}>
+                  <Text>Guest favorite</Text>
+              </View>
+              <TouchableOpacity style={styles.iconButton }>
+                  <Ionicons name="heart-outline" size={24} color={'white'}/>
+              </TouchableOpacity>
+              <Image source={item.image}  />
             </View>
                 
           <Text style={styles.location}>{item.location}</Text>
