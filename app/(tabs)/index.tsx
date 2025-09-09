@@ -30,7 +30,6 @@ import { useRouter } from 'expo-router';
           placeholderTextColor={'black'}
         />
       </View>  
-      <Text onPress={() => router.replace('/(tabs)')}>link</Text>
       <FlatList
       style={styles.quickLinks}
       horizontal
