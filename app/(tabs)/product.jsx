@@ -29,7 +29,7 @@ export default function Product() {
         </View>
       </View> */}
       <View style={styles.detail}>
-        <View style={{justifyContent: 'center', alignItems:'center', marginBottom:'10'}}>
+        <View style={{justifyContent: 'center', alignItems:'center', marginBottom:'10',}}>
           <Text style={{fontSize:20, fontWeight:'500', color:'#000000'}}>Magic Apt with Rooftop Pool && </Text>
           <Text style={{fontSize:20, fontWeight:'500', color:'#000000'}}>The Pearl View!</Text>
         </View>        
@@ -37,7 +37,7 @@ export default function Product() {
           <Text style={{fontSize:14, color:'#6A6A6A', fontWeight:'400'}}>Entire rental unit in Dubai, United Ar Emirates</Text>
           <Text style={{fontSize:14, color:'#6A6A6A', fontWeight:'400'}}>4 guests - 1 beddroom - 2 beds - 1.5 baths  </Text>
         </View>    
-        {/* <View style={{flexDirection: "row" , justifyContent:'center', alignItems:'center',  marginTop:30}}>
+        <View style={{flexDirection: "row" , justifyContent:'center', alignItems:'center',  gap:20, marginBottom:20}}>
           <Text style={{fontSize:'14', fontWeight:'500', color:'#000000'}}>8.83</Text>
           <View style={{width:1, height: 30, backgroundColor: "#D9D9D9",}}/>
           <View style={{justifyContent:'center', alignItems:'center'}}>
@@ -49,7 +49,7 @@ export default function Product() {
             <Text style={{fontSize:'14', fontWeight:'500', color:'#000000'}}>78</Text>
             <Text style={{fontSize:'14', color:'#000000'}}>Reviews</Text>
           </View>
-        </View> */}
+        </View>
       </View> 
       <View style={{ paddingHorizontal:20, gap:20 }}>
         <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1,  }}/>

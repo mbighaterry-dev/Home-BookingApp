@@ -7,7 +7,7 @@ export default function Profile() {
     const router = useRouter();
   return (        
     <ScrollView style={styles.container}>
-      <View style={{flexDirection: 'row', gap: 10, justifyContent:'flex-end', marginRight: 20}}>
+       <View style={{flexDirection: 'row', gap: 10, justifyContent:'flex-end', marginRight: 20}}>
           <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20}}>
               <Ionicons name="search-outline" size={20}/>
           </View>
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
         
     },
     profileContainer:{
-       width: 350,
+       width: 375,
        height: 253,
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems:'center',
     gap:10,
-    width:350,
+    width:370,
     height: 80,
     marginTop:30
     },
