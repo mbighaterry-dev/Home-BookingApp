@@ -62,7 +62,7 @@ export default function Profile() {
               <Ionicons name='hand-left-outline' size={24}/>
               <Text style={{fontSize:14, fontWeight:'400'}}>View profile</Text>
             </View>
-            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} onPress={() => router.push('../(pages)/ProfileDetails.tsx') } />
+            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} onPress={() => router.replace('../(pages)/ProfileDetails.tsx')}/>
           </View>
           <View style={styles.menuItem}>
             <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#eee',
         paddingTop: Platform.OS === 'android' ? 40 : 60,
         gap: 16, 
+
         
     },
     profileContainer:{

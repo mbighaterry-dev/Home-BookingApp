@@ -5,7 +5,7 @@ import Sleep from '../../component/sleep'
 
 export default function Product() {
   return (
-    <ScrollView>
+    <ScrollView style={styles.container}>
       {/* <View style={styles.imageContainer}>
         <Image
           // source={require('../../assets/images/Beautiful Image of Karata Towers, drone shot.png')}
@@ -28,30 +28,30 @@ export default function Product() {
           <Text style={styles.counterText}>1 / 32</Text>
         </View>
       </View> */}
-      {/* <View style={styles.detail}>
+      <View style={styles.detail}>
         <View style={{justifyContent: 'center', alignItems:'center', marginBottom:'10'}}>
-          <Text style={{fontSize:24, fontWeight:'500', color:'#000000'}}>Magic Apt with Rooftop Pool && </Text>
-          <Text style={{fontSize:24, fontWeight:'500', color:'#000000'}}>The Pearl View!</Text>
+          <Text style={{fontSize:20, fontWeight:'500', color:'#000000'}}>Magic Apt with Rooftop Pool && </Text>
+          <Text style={{fontSize:20, fontWeight:'500', color:'#000000'}}>The Pearl View!</Text>
         </View>        
-        <View style={{justifyContent: 'center', alignItems:'center'}}>
+        <View style={{justifyContent: 'center', alignItems:'center', marginBottom:20}}>
           <Text style={{fontSize:14, color:'#6A6A6A', fontWeight:'400'}}>Entire rental unit in Dubai, United Ar Emirates</Text>
           <Text style={{fontSize:14, color:'#6A6A6A', fontWeight:'400'}}>4 guests - 1 beddroom - 2 beds - 1.5 baths  </Text>
         </View>    
-        <View style={{flexDirection: "row" , justifyContent:'center', alignItems:'center', gap:30, marginTop:30}}>
-          <Text style={{fontSize:'18', fontWeight:'500', color:'#000000'}}>8.83</Text>
+        {/* <View style={{flexDirection: "row" , justifyContent:'center', alignItems:'center',  marginTop:30}}>
+          <Text style={{fontSize:'14', fontWeight:'500', color:'#000000'}}>8.83</Text>
           <View style={{width:1, height: 30, backgroundColor: "#D9D9D9",}}/>
           <View style={{justifyContent:'center', alignItems:'center'}}>
-            <Text style={{fontSize:'18', fontWeight:'500', color:'#000000'}}>Guest</Text>
-            <Text style={{fontSize:'14', fontWeight:'500', color:'#000000'}}>favorite</Text>
+            <Text style={{fontSize:'14', fontWeight:'500', color:'#000000'}}>Guest</Text>
+            <Text style={{fontSize:'14',  color:'#000000'}}>favorite</Text>
           </View>
           <View style={{width:1, height: 30, backgroundColor: "#D9D9D9",}}/>        
           <View style={{justifyContent:'center', alignItems:'center'}}>
-            <Text style={{fontSize:'18', fontWeight:'500', color:'#000000'}}>78</Text>
-            <Text style={{fontSize:'14', fontWeight:'500', color:'#000000'}}>Reviews</Text>
+            <Text style={{fontSize:'14', fontWeight:'500', color:'#000000'}}>78</Text>
+            <Text style={{fontSize:'14', color:'#000000'}}>Reviews</Text>
           </View>
-        </View>
-      </View>
-      <View style={{ padding:20, gap:20 }}>
+        </View> */}
+      </View> 
+      <View style={{ paddingHorizontal:20, gap:20 }}>
         <View style={{borderTopWidth:1, borderColor:'#D9D9D9',  borderBottomWidth:1,  }}/>
         <View style={{flexDirection:'row',  gap: 10 , }}>
           <View style={{height:40, width:40, borderRadius:20, backgroundColor:'#D9D9D9'}}/>
@@ -91,7 +91,7 @@ export default function Product() {
         </View>
       </View>
       <View style={{gap:20, padding:20}}>
-        <View style={{backgroundColor:'#F7F7F7', borderRadius:8, height: 74, width:384, padding:16}}>
+        <View style={{backgroundColor:'#F7F7F7', borderRadius:8, height: 74, width:350, padding:16}}>
           <Text style={{fontSize:14, fontStyle:400, color: '#6A6A6A'}}>Some info has automatically been translatd.</Text>
           <Text style={{textDecorationLine:'underline', fontSize:14, fontWeight:'500', color:""}}>Show original</Text>
         </View>
@@ -181,12 +181,18 @@ export default function Product() {
           </TouchableOpacity>
       </View>
       <View>
-      </View>       */}
+      </View>       
     </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    paddingTop:60,
+    marginBottom: 20,
+
+  },
   detail:{
     backgroundColo:'#ffffff',
     borderTopEndRadius:20,
