@@ -1,20 +1,14 @@
- import { StyleSheet, Text, View, TextInput, FlatList, Image,  Dimensions, TouchableOpacity } from 'react-native'
+ import { StyleSheet, Text, View, TextInput, FlatList, Image,  Dimensions, TouchableOpacity, } from 'react-native'
 import { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import Ionicons from '@expo/vector-icons/Ionicons';  
 import sectionData from '../../component/sectionData';
 import Section from '../../component/section';
-import headerData from '../../component/headerData';
-import { useRouter } from 'expo-router';
-
+import headerData from '../../component/header'
 
  export default function Home() {
   const [search, setSearch] = useState('');
   const [selected, setSelected] = useState(headerData[0].title);
-  const router = useRouter();
-
-
-
     return (
     <LinearGradient 
       colors={['#E0DEDD', '#FEFEFD', '#0000000A']}

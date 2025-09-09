@@ -1,7 +1,7 @@
 const headerData = [
     {
         id:'1',
-        Image:require('../assets/images/image 3 (1).png'),
+        Image:require('../assets/images/image3_.png'),
         title: 'Home'
     },
      {

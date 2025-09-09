@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity, Pressable } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Pressable, Platform } from 'react-native'
 import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
@@ -28,7 +28,7 @@ export default function Notification() {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        paddingTop:50,
+        paddingTop:Platform.OS === 'android' ? 40 : 60,
         marginHorizontal:20
     },
     title:{

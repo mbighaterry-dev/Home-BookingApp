@@ -28,7 +28,7 @@ export default function Product() {
           <Text style={styles.counterText}>1 / 32</Text>
         </View>
       </View> */}
-      <View style={styles.detail}>
+      {/* <View style={styles.detail}>
         <View style={{justifyContent: 'center', alignItems:'center', marginBottom:'10'}}>
           <Text style={{fontSize:24, fontWeight:'500', color:'#000000'}}>Magic Apt with Rooftop Pool && </Text>
           <Text style={{fontSize:24, fontWeight:'500', color:'#000000'}}>The Pearl View!</Text>
@@ -180,21 +180,8 @@ export default function Product() {
             <Text style={{ color:'#222222', fontSize:14, fontWeight:'500'}}>Rare find! This place is usually booked</Text>
           </TouchableOpacity>
       </View>
-      <View style={{flexDirection:'row', justifyContent:'space-between', padding: 20}}>
-        <View style={{gap:5}}>
-          <View style={{flexDirection:'row', gap: 3}}>
-            <Text style={{textDecorationLine:'line-through', color:'#6A6A6A', fontWeight:'500', fontSize:'16'}}>$271</Text>
-            <Text style={{ color:'#000000', fontWeight:'500', fontSize:'16'}}>$230</Text>
-          </View>
-          <View style={{flexDirection:'row', gap: 3}}>
-            <Text style={{color:'#6A6A6A', fontSize:12, fontWeight:'400'}}>For 2 nights</Text>
-            <Text style={{color:'#6A6A6A', fontSize:12, fontWeight:'400'}}>Aug 1-3</Text>
-          </View>
-        </View>
-        <TouchableOpacity style={{backgroundColor:'#E31C5D', borderRadius:24, height:49, width:144, justifyContent:'center', alignItems:'center'}}>
-          <Text style={{ color:'#FFFFFF', fontSize:14, fontWeight:'500'}}>Remove</Text>
-        </TouchableOpacity>
-      </View>      
+      <View>
+      </View>       */}
     </ScrollView>
   )
 }

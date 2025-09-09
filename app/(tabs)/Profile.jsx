@@ -1,22 +1,22 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, Pressable } from 'react-native'
+import { StyleSheet, Text, View, Image, ScrollView, Platform } from 'react-native'
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { useRouter } from 'expo-router';
+import {useRouter} from 'expo-router'
 
 export default function Profile() {
-  const router = useRouter();
+    const router = useRouter();
   return (        
     <ScrollView style={styles.container}>
-      <View style={{flexDirection: 'row', gap: 10, justifyContent:'flex-end', }}>
+      <View style={{flexDirection: 'row', gap: 10, justifyContent:'flex-end', marginRight: 20}}>
           <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20}}>
               <Ionicons name="search-outline" size={20}/>
           </View>
-          <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20}}>
+          <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:10}}>
           <Ionicons name="settings" size={20}/>
           </View>
         </View>
       <View style={{paddingHorizontal:20}}>
-         <Text style={{fontSize :32, fontWeight:'500'}}>Profile</Text>
+         <Text style={{fontSize :32, fontWeight:'500', marginBottom:20}}>Profile</Text>
       <View style={styles.profileContainer}>
         <View style={styles.profileImage}>
             <Text style={{fontSize:40, color:"#FFFFFF", fontWeight:'700'}}>F</Text>
@@ -35,7 +35,7 @@ export default function Profile() {
         </View>
       </View>
       <View style={styles.host}>
-        <Image source={require('../../assets/images/image 3 (1).png')}/>
+        <Image source={require('../../assets/images/image3_.png')}/>
         <View>
             <Text style={{fontWeight: 'bold'}}>Become a Host</Text>
             <Text>It is easy to start hosting and earn income.</Text>
@@ -57,13 +57,13 @@ export default function Profile() {
             </View>
             <Ionicons name='chevron-forward-outline'size={24} color={'gray'} />
           </View>
-          <Pressable style={styles.menuItem} onPress={() => router.replace('../(pages)/ProfileDetails.tsx')}>
+          <View style={styles.menuItem}>
             <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
               <Ionicons name='hand-left-outline' size={24}/>
               <Text style={{fontSize:14, fontWeight:'400'}}>View profile</Text>
             </View>
-            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} />
-          </Pressable>
+            <Ionicons name='chevron-forward-outline'size={24} color={'gray'} onPress={() => router.push('../(pages)/ProfileDetails.tsx') } />
+          </View>
           <View style={styles.menuItem}>
             <View style={{flexDirection:'row', gap:20, alignItems:'center'}}>
               <Ionicons name='hand-left-outline' size={24}/>
@@ -109,11 +109,12 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
         backgroundColor: '#eee',
-        paddingTop:50,
-        gap: 16
+        paddingTop: Platform.OS === 'android' ? 40 : 60,
+        gap: 16, 
+        
     },
     profileContainer:{
-       width: 382,
+       width: 350,
        height: 253,
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
@@ -155,7 +156,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     borderRadius: 13,
     height:160,
-    width: 180
+    width: 170
     },
     host:{
     flexDirection:'row',  
@@ -170,7 +171,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems:'center',
     gap:10,
-    width:383,
+    width:350,
     height: 80,
     marginTop:30
     },

@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Image , Pressable} from 'react-native'
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Image , Pressable, Platform} from 'react-native'
 import  { useState } from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';  
@@ -81,8 +81,8 @@ export default function Message() {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    paddingTop:50 ,
-    paddingHorizontal:20
+    paddingTop: Platform.OS === 'android' ? 40 : 60,
+    paddingHorizontal:12
     
   },
   title:{

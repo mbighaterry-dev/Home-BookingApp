@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, Platform } from 'react-native'
 import React from 'react'
 
 export default function trips() {
@@ -47,7 +47,7 @@ export default function trips() {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    paddingTop:50,
+   paddingTop: Platform.OS === 'android' ? 80 : 80,
   },
   HeaderTitle:{
     fontSize :32, 
