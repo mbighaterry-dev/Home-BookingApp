@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, FlatList } from 'react-native'
 import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import Sleep from '../component/sleep'
+import Sleep from '../../component/sleep'
 
 export default function Product() {
   return (

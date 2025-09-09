@@ -1,15 +1,17 @@
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Image , Pressable} from 'react-native'
 import  { useState } from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { useRouter } from 'expo-router';  
 
 export default function Message() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const  categories = ["All", "Home", "Experences", "Traveling", "Support"]
+  const  categories = ["All", "Home", "Experences", "Traveling", "Support"];
+  const router = useRouter();
   return (
     <View style={styles.container}>
-      <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20, width:30, alignSelf:'flex-end'}}>
+      <Pressable style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20, width:30, alignSelf:'flex-end'}} onPress={() => router.replace('/(pages)/Notifications')}>
         <Ionicons name="notifications-outline" size={20}/>
-      </View>
+      </Pressable>
       <Text style={styles.title}>Message</Text>
       <View style={{marginTop:20}}>
         <ScrollView

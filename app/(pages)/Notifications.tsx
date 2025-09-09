@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Pressable } from 'react-native'
 import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { useRouter } from 'expo-router';
 
 export default function Notification() {
+    const router = useRouter();
   return (
     <View style={styles.container}>
-        <View style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20, width:30, marginBottom:20}}>
+        <Pressable style={{backgroundColor:'#dad8d8ff', padding:5, borderRadius:20, width:30, marginBottom:20}} onPress={() => router.replace('/(tabs)/message')}>
             <Ionicons name='arrow-back' size={20} color={'gray'}/>
-        </View>
+        </Pressable>
       <Text style={styles.title}>Notification</Text>
       <View style={{marginTop:"40%"}}>
         <View style={{justifyContent:'center', alignItems:'center'}}>

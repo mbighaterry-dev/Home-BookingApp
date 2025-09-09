@@ -20,9 +20,10 @@ export default function Layout() {
                 )
             }}
             />
-            <Tabs.Screen name="messages"/>
-            <Tabs.Screen name="profile"/>
+            <Tabs.Screen name="product"/>
             <Tabs.Screen name="trips"/>
+            <Tabs.Screen name="message"/>
+            
         </Tabs>
     )
 }

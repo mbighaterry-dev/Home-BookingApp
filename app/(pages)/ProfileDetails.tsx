@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-export default function profile() {
+export default function ProfileDetails() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.headerContainer}>

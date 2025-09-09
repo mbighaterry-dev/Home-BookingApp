@@ -5,19 +5,19 @@ const sectionData = [
     data:[
            {
                 id: 'a1',   
-                image: require('../../assets/images/Picture of Doha Skyline.png'),
+                image: require('../assets/images/Picture of Doha Skyline.png'),
                 location: 'Apartment in West Bay',
                 price: '$230 for 2 nights 5.0',
             },
             {
                 id: 'a2',    
-                image: require('../../assets/images/Apartment in The Pearl Doha.png'),
+                image: require('../assets/images/Apartment in The Pearl Doha.png'),
                 location: 'Apartment in The Pearl',
                 price: '$230 for 2 nights 5.0',
             },
             {
                 id: 'a3',    
-                image: require('../../assets/images/Apartment in Doha, Westbay.png'),
+                image: require('../assets/images/Apartment in Doha, Westbay.png'),
                 location: 'Westbay, Doha, Qatar',  
                 price: '$230 for 2 nights 5.0', 
             },
@@ -29,19 +29,19 @@ const sectionData = [
         data:[
                 {
                     id: 'b1',
-                    image: require('../../assets/images/Appartment in Doha.png'),
+                    image: require('../assets/images/Appartment in Doha.png'),
                     location: 'Apartment in Doha',
                     price: '$230 for 2 nights 5.0',
                 },
                 {
                     id: 'b2',
-                    image: require('../../assets/images/Apartment in Doha, Westbay.png'),
+                    image: require('../assets/images/Apartment in Doha, Westbay.png'),
                     location: 'Apartment in The Pearl',
                     price: '$230 for 2 nights 5.0',
                 },
                 {
                     id: 'b3',
-                    image: require('../../assets/images/Apartment in The Pearl Doha.png'),
+                    image: require('../assets/images/Apartment in The Pearl Doha.png'),
                     location: 'Westbay, Doha, Qatar',
                     price: '$230 for 2 nights 5.0',
                 },            
@@ -53,19 +53,19 @@ const sectionData = [
         data: [
                 {
                     id: 'c1',
-                    image: require('../../assets/images/Dunes with luxury tent stay.png'),
+                    image: require('../assets/images/Dunes with luxury tent stay.png'),
                     location: 'Apartment in The Doha',
                     price: '$230 for 2 nights 5.0',
                 },
                 {
                     id: 'c2',
-                    image: require('../../assets/images/Souq Waqif, Doha.png'),
+                    image: require('../assets/images/Souq Waqif, Doha.png'),
                     location: 'Apartment in The Doha',
                     price: '$230 for 2 nights 5.0',
                 },
                 {
                     id: 'c3',
-                    image: require('../../assets/images/Souq Waqif, Doha.png'),
+                    image: require('../assets/images/Souq Waqif, Doha.png'),
                     location: 'Apartment in The Doha',
                     price: '$230 for 2 nights 5.0',
                 },
