@@ -47,7 +47,7 @@ export default function trips() {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-   paddingTop: Platform.OS === 'android' ? 80 : 80,
+   paddingTop: Platform.OS === 'android' ? 60 : 80,
   },
   HeaderTitle:{
     fontSize :32, 
