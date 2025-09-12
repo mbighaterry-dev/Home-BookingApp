@@ -34,12 +34,11 @@ export default Section;
 const styles =  StyleSheet.create({
   section: {
     marginVertical: 12,
-    paddingHorizontal:20
   },
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 10,
+    margin: 10    
   },
   imageContainer:{
     position: 'relative' , 

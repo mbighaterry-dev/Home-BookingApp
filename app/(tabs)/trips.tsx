@@ -35,7 +35,7 @@ export default function trips() {
           <Text style={{fontWeight:700, fontSize:16, marginBottom:20}}>Build the perfect trip</Text>
           <Text style={{color:'#6A6A6A'}}>Explore homes, experiences and services.</Text>
           <Text style={{color:'#6A6A6A'}}>When you book, your reservations will show up here</Text>
-          <TouchableOpacity style={styles.tripButton}>
+          <TouchableOpacity style={styles.tripButton} >
             <Text style={{color:'white', fontSize:14 }}>Get started</Text>
           </TouchableOpacity>
         </View>

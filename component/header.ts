@@ -1,18 +1,22 @@
 const headerData = [
     {
-        id:'1',
-        Image:require('../assets/images/image3_.png'),
-        title: 'Home'
+       
+        Image:require('../assets/images/house.png'),
+        title: 'Home',
+        badge: false
+
     },
      {
-        id:'2',
-        Image:require('../assets/images/image 4.png'),
-        title: 'Experience'
+       
+        Image:require('../assets/images/image4.png'),
+        title: 'Experience',
+        badge: true
     },
      {
-        id:'3',
-        Image:require('../assets/images/image 5 (1).png'),
-        title: 'Service'
+       
+        Image:require('../assets/images/image5.png'),
+        title: 'Service',
+        badge: true
     }
 ];
 export default headerData

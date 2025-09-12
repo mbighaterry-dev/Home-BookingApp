@@ -5,10 +5,9 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import sectionData from '../../component/sectionData';
 import Section from '../../component/section';
 import headerData from '../../component/header'
-
  export default function Home() {
   const [search, setSearch] = useState('');
-  const [selected, setSelected] = useState(headerData[0].title);
+  const [selected, setSelected] = useState("Homes");
     return (
     <LinearGradient 
       colors={['#E0DEDD', '#FEFEFD', '#0000000A']}
@@ -25,27 +24,37 @@ import headerData from '../../component/header'
         />
       </View>  
       <FlatList
-      style={styles.quickLinks}
+      contentContainerStyle={styles.quickLinks}
       horizontal
       showsHorizontalScrollIndicator={false}
-            data={headerData}
-      keyExtractor={(item) => item.id }
+      data={headerData}
+      keyExtractor={(item) => item.title }
       renderItem={({item}) => (
         <TouchableOpacity
-        style={[
-              styles.tab,
-              selected === item.title && styles.activeTab, 
-
-            ]}
+        style={styles.tab }
             onPress={() => setSelected(item.title)}
-            >
-          <Image source={item.Image}/>
-          <Text>{item.title}</Text>
+        >
+          <View>
+            <Image source={item.Image} style={styles.icon} resizeMode= "contain"/>
+            {item.badge && (
+              <View style={styles.badge}>
+                <Text style={styles.badgeText}>NEW</Text>
+              </View>
+            )}
+          </View>
+          <Text
+          style={[
+            styles.label,
+            selected === item.title && styles.selectedLabel
+          ]}
+          >{item.title}</Text>
+            {selected === item.title && <View style={styles.underline} />}
         </TouchableOpacity>
       )}
 
       /> 
       <FlatList
+      showsVerticalScrollIndicator={false}
       style={styles.section}
       data = {sectionData}
       renderItem={({ item }) => (
@@ -67,48 +76,74 @@ import headerData from '../../component/header'
     flexDirection:'row',
     backgroundColor:'#ffffff',
     gap:10,
-    borderRadius: 16,
+    borderRadius: 30,
     padding:10,
     alignItems:'center',
-    justifyContent:'center',
     marginTop:50,
+    width:'90%',
+    alignSelf:'center'
 
   },
   input:{
-    width:300,
+    flex:1,
     fontSize:16,
     color:'black',
     fontWeight:'500',
-    backgroundColor:'#ffffff',
+    marginLeft:10,
 
   },
   section:{
-    paddingVertical:40,
+    paddingVertical:20,
   },
   quickLinks:{
-    paddingVertical:40,
+    marginTop: 30,
+    marginBottom:30,
+    paddingHorizontal: 20,
   },
   tab: {
   alignItems: "center",
-  paddingVertical: 8,
-  paddingHorizontal: 14,
-  borderRadius: 12,
-  marginRight: 12,
-},
-activeTab: {
+   marginRight: 30,
+   width: 70,
+   height: 80,
+   justifyContent:'flex-start'
 },
 icon: {
-  width: 28,
-  height: 28,
-  resizeMode: "contain",
+  width: 35,
+  height: 35,
+  marginBottom:2
 },
-  // flatlist:{
-  //   marginTop:20,
-  //   height:Dimensions.get('window').height*0.4,
-  // },
-  // homecard:{
-  //   alignItems:'center',
-  //   margin:10,
-  // }
+label:{
+  fontSize: 12,
+  color: "#000000",
+  fontWeight: "500",
+  
+},
+selectedLabel:{
+  color: "black",
+  fontWeight: "bold",
+},
+badge: {
+    position: "absolute",
+    top: -8,
+    right: -20,
+    backgroundColor: "#334155",
+    borderRadius: 12,
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+  },
+  badgeText: {
+    color: "#fff",
+    fontSize: 10,
+    fontWeight: "bold",
+  },
+  underline: {
+    height: 3,
+    backgroundColor: "#000000",
+    width: 35,
+    marginTop: 3,
+    borderTopLeftRadius:5,
+    borderTopRightRadius:5    
+  },
+ 
   
  })
